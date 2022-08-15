@@ -1,0 +1,21 @@
+{
+  "name": "api-calendar-tasks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./src/index.js",
+    "start": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dudafurtado/API-calendar-tasks.git"
+  },
+  "keywords": [],
+  "author": "Maria Eduarda Furtado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dudafurtado/API-calendar-tasks/issues"
+  },
+  "homepage": "https://github.com/dudafurtado/API-calendar-tasks#readme"
+}
