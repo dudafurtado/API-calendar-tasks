@@ -1,5 +1,8 @@
+const { fieldsToRegister } = require('../validations/postSchema');
+
 const registerUser = async (req, res) => {
   const { name, email, password } = req.body;
+  fieldsToRegister.validate({ name, email, password });
 
   try {
     
