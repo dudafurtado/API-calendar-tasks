@@ -1,5 +1,5 @@
 const createTask = async (req, res) => {
-  const {} = req.body;
+  const { title, description, date, duration, tag } = req.body;
 
   try {
 
@@ -9,7 +9,7 @@ const createTask = async (req, res) => {
 }
 
 const editTask = async (req, res) => {
-  const {} = req.body;
+  const { title, description, date, duration, tag } = req.body;
 
   try {
     
@@ -19,6 +19,8 @@ const editTask = async (req, res) => {
 }
 
 const removeTask = async (req, res) => {
+  const { id } = req.params;
+
   try {
     
   } catch (error) {
@@ -27,6 +29,8 @@ const removeTask = async (req, res) => {
 }
 
 const detailsTask = async (req, res) => {
+  const { id } = req.params;
+
   try {
     
   } catch (error) {
@@ -42,10 +46,19 @@ const searchTask = async (req, res) => {
   }
 }
 
+const listTasks = async (req, res) => {
+  try {
+    
+  } catch (error) {
+    return res.status(500).json(error.message);
+  }
+}
+
 module.exports = {
   createTask,
   editTask,
   removeTask,
   detailsTask,
   searchTask,
+  listTasks,
 }

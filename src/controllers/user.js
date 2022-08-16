@@ -1,6 +1,6 @@
 const registerUser = async (req, res) => {
-  const {} = req.body;
-  
+  const { name, email, password } = req.body;
+
   try {
     
   } catch (error) {

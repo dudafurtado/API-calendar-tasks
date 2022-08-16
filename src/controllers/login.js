@@ -1,6 +1,6 @@
 const loginUser = async (req, res) => {
-  const {} = req.body;
-  
+  const { email, password } = req.body;
+
   try {
     
   } catch (error) {
