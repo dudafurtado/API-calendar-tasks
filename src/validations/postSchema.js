@@ -5,7 +5,7 @@ const errorMessage = require('../messages/error');
 const fieldsToRegister = yup.object().shape({
   name: yup.string().trim().required().max(80, errorMessage.maxNameUser),
   email: yup.string().email().trim().required().max(60, errorMessage.maxEmailUser),
-  password: yup.string().trim().required(),
+  password: yup.string().trim().required().min(8, errorMessage.minPasswordUser),
 });
 
 const fieldsToLogin = yup.object().shape({
@@ -16,9 +16,9 @@ const fieldsToLogin = yup.object().shape({
 const fieldsToTask = yup.object().shape({
   title: yup.string().trim().max(45, errorMessage.maxTitleTask),
   description: yup.string().trim(),
-  when_date: yup.date().trim().required(),
-  duration: number().trim().required(),
-  tag_id: number().trim(),
+  when_date: yup.date().required(),
+  duration: yup.number().required(),
+  tag_id: yup.number(),
 });
 
 const fieldsToTag = yup.object().shape({

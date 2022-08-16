@@ -7,7 +7,7 @@ const login = require('../controllers/login');
 const task = require('../controllers/task');
 const tag = require('../controllers/tag');
 
-routes.post('/register', user.registerUser);
+routes.get('/register', user.registerUser);
 routes.post('/login', login.loginUser);
 
 routes.post('/task/create', task.createTask);
